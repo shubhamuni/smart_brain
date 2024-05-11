@@ -53,7 +53,7 @@ function App() {
                     },
                     modes: {
                         push: {
-                            quantity: 4,
+                            quantity: 10,
                         },
                         repulse: {
                             distance: 200,
@@ -67,7 +67,7 @@ function App() {
                     },
                     links: {
                         color: "#ffffff",
-                        distance: 150,
+                        distance: 100,
                         enable: true,
                         opacity: 0.5,
                         width: 1,
@@ -79,24 +79,24 @@ function App() {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 5,
                         straight: false,
                     },
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 100,
                         },
-                        value: 80,
+                        value: 290,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 0.3,
                     },
                     shape: {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 1, max: 2 },
                     },
                 },
                 detectRetina: true,

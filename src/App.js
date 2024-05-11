@@ -9,8 +9,8 @@ function App() {
     <div className="App">
     <Navigation/>
     <Logo/>
-    <ImageLinkForm/>
     <Rank/>
+    <ImageLinkForm/>
     </div>
   );
 }

@@ -35,7 +35,7 @@ function App() {
             options={{
                 background: {
                     color: {
-                        value: "#0d47a1",
+                        value: "#26020a",
                     },
                 },
                 fpsLimit: 60,
@@ -76,11 +76,14 @@ function App() {
                         direction: "none",
                         enable: true,
                         outModes: {
-                            default: "bounce",
+                            default: "out",
                         },
                         random: false,
                         speed: 5,
                         straight: false,
+                        attract: {
+                          enable: true,
+                        },
                     },
                     number: {
                         density: {

@@ -100,7 +100,7 @@ function App() {
                     },
                     size: {
                         value: { min: 1, max: 2 },
-                    },
+                    }, 
                 },
                 detectRetina: true,
             }}

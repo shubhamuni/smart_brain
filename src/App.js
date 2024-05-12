@@ -29,6 +29,7 @@ function App() {
 };
   return (
     <div className="App">
+    
     { init && <Particles className='particles'
             id="tsparticles"
             particlesLoaded={particlesLoaded}
@@ -106,10 +107,16 @@ function App() {
             }}
         /> 
     }
-    <Navigation/>
-    <Logo/>
-    <Rank/>
-    <ImageLinkForm/>
+    {setTimeout(()=>{
+        return(
+            <div>
+            <Navigation/>
+            <Logo/>
+            <Rank/>
+            <ImageLinkForm/>
+            </div>
+        )
+    },1000)}
     </div>
   );
 }

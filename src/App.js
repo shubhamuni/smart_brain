@@ -107,16 +107,10 @@ function App() {
             }}
         /> 
     }
-    {setTimeout(()=>{
-        return(
-            <div>
-            <Navigation/>
-            <Logo/>
-            <Rank/>
-            <ImageLinkForm/>
-            </div>
-        )
-    },1000)}
+    <Navigation/>
+    <Logo/>
+    <Rank/>
+    <ImageLinkForm/>
     </div>
   );
 }

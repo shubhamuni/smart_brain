@@ -36,7 +36,7 @@ function App() {
             options={{
                 background: {
                     color: {
-                        value: "#1b4025",
+                        value: "#1b4125",
                     },
                 },
                 fpsLimit: 60,

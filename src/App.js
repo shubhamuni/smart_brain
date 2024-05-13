@@ -111,7 +111,7 @@ function App() {
     <Logo/>
     <Rank/>
     <ImageLinkForm/>
-    <button>Click me</button>
+    
     </div>
   );
 }

@@ -54,7 +54,7 @@ function App() {
                     },
                     modes: {
                         push: {
-                            quantity: 10,
+                            quantity: 5,
                         },
                         repulse: {
                             distance: 200,

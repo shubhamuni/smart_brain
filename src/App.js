@@ -111,6 +111,7 @@ function App() {
     <Logo/>
     <Rank/>
     <ImageLinkForm/>
+    <button onClick={this}>Click me</button>
     </div>
   );
 }

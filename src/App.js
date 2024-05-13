@@ -57,7 +57,7 @@ function App() {
                             quantity: 5,
                         },
                         repulse: {
-                            distance: 200,
+                            distance: 120,
                             duration: 0.4,
                         },
                     },

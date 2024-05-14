@@ -9,6 +9,7 @@ import { loadSlim } from "@tsparticles/slim";
 
 function App() {
   const [ init, setInit ] = useState(false);
+  const [input, setInput] = useState('');
 
   // this should be run only once per application lifetime
   useEffect(() => {

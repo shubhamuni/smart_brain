@@ -12,9 +12,11 @@ function App() {
   const [input, setInput] = useState('');
 
   const onInputChange = (event) => {
-    console.log(event)
+    console.log(event.target.value)
   }
-
+  const onButtonSubmit = () => {
+    console.log("Click")
+  }
   // this should be run only once per application lifetime
   useEffect(() => {
       initParticlesEngine(async (engine) => {
@@ -115,7 +117,7 @@ function App() {
     <Navigation/>
     <Logo/>
     <Rank/>
-    <ImageLinkForm onInputChange={onInputChange}/>
+    <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
     
     </div>
   );

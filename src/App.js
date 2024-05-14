@@ -12,7 +12,8 @@ function App() {
   const [input, setInput] = useState('');
 
   const onInputChange = (event) => {
-    console.log(event.target.value)
+    setInput(event.target.value)
+
   }
   const onButtonSubmit = () => {
     console.log("Click")

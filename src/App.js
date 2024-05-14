@@ -11,6 +11,10 @@ function App() {
   const [ init, setInit ] = useState(false);
   const [input, setInput] = useState('');
 
+  const onInputChange = (event) => {
+    console.log(event)
+  }
+
   // this should be run only once per application lifetime
   useEffect(() => {
       initParticlesEngine(async (engine) => {
@@ -111,7 +115,7 @@ function App() {
     <Navigation/>
     <Logo/>
     <Rank/>
-    <ImageLinkForm/>
+    <ImageLinkForm onInputChange={onInputChange}/>
     
     </div>
   );

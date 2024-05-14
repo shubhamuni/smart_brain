@@ -6,6 +6,7 @@ import Navigation from './components/Navigation/Navigation';
 import Rank from './components/Rank/Rank';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from "@tsparticles/slim";
+import FaceRecognition from './components/Face-Recognition/FaceRecognition';
 
 
 function App() {
@@ -61,17 +62,15 @@ const requestOptions = {
 // https://api.clarifai.com/v2/models/{YOUR_MODEL_ID}/outputs
 // this will default to the latest version_id
 
-
-
   const onInputChange = (event) => {
     setInput(event.target.value)
-
   }
   const onButtonSubmit = () => {
     fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/" + MODEL_VERSION_ID + "/outputs", requestOptions)
     .then(response => response.json())
     .then(result => {
-        const regions = result.outputs[0].data.regions;
+        const newLocal = result.outputs[0].data.regions;
+        const regions = newLocal;
         regions.forEach(region => {
             // Accessing and rounding the bounding box values
             const boundingBox = region.region_info.bounding_box;
@@ -191,6 +190,7 @@ const requestOptions = {
     <Logo/>
     <Rank/>
     <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
+    <FaceRecognition/>
     </div>
   );
 }

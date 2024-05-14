@@ -61,7 +61,14 @@ const requestOptions = {
 // https://api.clarifai.com/v2/models/{YOUR_MODEL_ID}/outputs
 // this will default to the latest version_id
 
-fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/" + MODEL_VERSION_ID + "/outputs", requestOptions)
+
+
+  const onInputChange = (event) => {
+    setInput(event.target.value)
+
+  }
+  const onButtonSubmit = () => {
+    fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/" + MODEL_VERSION_ID + "/outputs", requestOptions)
     .then(response => response.json())
     .then(result => {
         const regions = result.outputs[0].data.regions;
@@ -82,13 +89,6 @@ fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/" + MODEL_VE
         });
     })
     .catch(error => console.log('error', error));
-
-  const onInputChange = (event) => {
-    setInput(event.target.value)
-
-  }
-  const onButtonSubmit = () => {
-    console.log("Click")
   }
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -191,7 +191,6 @@ fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/" + MODEL_VE
     <Logo/>
     <Rank/>
     <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
-    
     </div>
   );
 }

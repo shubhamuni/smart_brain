@@ -16,7 +16,7 @@ function App() {
   const returnClarifaiJSONRequest = (imageurl) => {
     const PAT = '8768d5deea344d72aa5cb2d3aa849640';
     const USER_ID = 'clarifai';
-    const APP_ID = 'main';
+    const APP_ID = 'smart';
     const MODEL_ID = 'face-detection';
 
     const raw = JSON.stringify({

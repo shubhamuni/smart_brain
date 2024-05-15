@@ -15,9 +15,8 @@ function App() {
 
   const returnClarifaiJSONRequest = (imageurl) => {
     const PAT = '8768d5deea344d72aa5cb2d3aa849640';
-    const USER_ID = 'clarifai';
+    const USER_ID = 'shubhampatil';
     const APP_ID = 'smart';
-    const MODEL_ID = 'face-detection';
 
     const raw = JSON.stringify({
       "user_app_id": {
@@ -43,20 +42,24 @@ function App() {
       },
       body: raw
     };
-    return {requestOptions, MODEL_ID};
+    return {requestOptions};
   }
-
+  const MODEL_ID = 'face-detection';
   const fetchClarifaiData = () => {
-    fetch(`https://api.clarifai.com/v2/models/face-detection/versions/outputs`, returnClarifaiJSONRequest(input))
+    fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/outputs", returnClarifaiJSONRequest(input))
       .then(response => response.json())
       .then(result => {
-        console.log(result);
+        return (
+          setClarifaiData(result),
+          console.log(result)
+        )
+        
       })
       .catch(error => console.log('error', error));
   };
 
   const onInputChange = (event) => {
-    setClarifaiData(event.target.value)
+    setInput(event.target.value)
   };
 
   const onButtonSubmit = () => {

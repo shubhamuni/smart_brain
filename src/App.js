@@ -14,7 +14,7 @@ function App() {
   const [clarifaiData, setClarifaiData] = useState(null);
 
   const returnClarifaiJSONRequest = (imageurl) => {
-    const PAT = '8768d5deea344d72aa5cb2d3aa849640';
+    const PAT = '2b3660cd318c43ceb89a3440829fe8ba';
     const USER_ID = 'shubhampatil';
     const APP_ID = 'smart';
 
@@ -49,11 +49,7 @@ function App() {
     fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/outputs", returnClarifaiJSONRequest(input))
       .then(response => response.json())
       .then(result => {
-        return (
-          setClarifaiData(result),
-          console.log(result)
-        )
-        
+          setClarifaiData(result)
       })
       .catch(error => console.log('error', error));
   };

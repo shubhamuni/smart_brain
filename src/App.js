@@ -64,7 +64,7 @@ function App() {
   const onButtonSubmit = () => {
     fetch("https://api.clarifai.com/v2/models/face-detection/versions/outputs", returnClarifaiJSONRequest(input))
     .then(response => response.json())
-    .then(result => console.log(result))
+    .then(result => setInput(result))
     .catch(error => console.log('error', error));
   }
   // this should be run only once per application lifetime
@@ -168,7 +168,7 @@ function App() {
     <Logo/>
     <Rank/>
     <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
-    <FaceRecognition/>
+    <FaceRecognition imageurl={input}/>
     </div>
   );
 }

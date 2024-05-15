@@ -50,13 +50,13 @@ function App() {
     fetch(`https://api.clarifai.com/v2/models/face-detection/versions/outputs`, returnClarifaiJSONRequest(input))
       .then(response => response.json())
       .then(result => {
-        setClarifaiData(result.outputs[0].data.regions);
+        console.log(result);
       })
       .catch(error => console.log('error', error));
   };
 
   const onInputChange = (event) => {
-    setInput(event.target.value)
+    setClarifaiData(event.target.value)
   };
 
   const onButtonSubmit = () => {
@@ -159,7 +159,7 @@ function App() {
     <Logo/>
     <Rank/>
     <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
-    <FaceRecognition imageurl={input}/>
+    <FaceRecognition clarifaiData={clarifaiData}/>
     </div>
   );
 }

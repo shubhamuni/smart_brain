@@ -15,7 +15,10 @@ function App() {
 
 const calculateFaceLocation = (data) => {
   const clariFaiFace = data;
-  const image = document.getElementById("inputImage")
+  const image = document.getElementById("inputImage");
+  const width = Number(image.width);
+  const height = Number(image.height);
+  console.log(width,height)
 }
 
 

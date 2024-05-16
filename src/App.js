@@ -19,6 +19,16 @@ const calculateFaceLocation = (data) => {
   const width = Number(image.width);
   const height = Number(image.height);
   console.log(width,height)
+  return{
+    leftCol: clariFaiFace.left_col * width,
+    topRow: clariFaiFace.top_row * height,
+    rightCol: width-(clariFaiFace.right_col * width),
+    bottomRow:height-(clariFaiFace.bottom_row * height)
+  }
+}
+const displayFaceBox = (box) => {
+  console.log(box);
+  setBox(box);
 }
 
 
@@ -68,16 +78,16 @@ const calculateFaceLocation = (data) => {
           regions.forEach(region => {
             // Accessing and rounding the bounding box values
             const boundingBox = region.region_info.bounding_box;
-            const topRow = boundingBox.top_row.toFixed(3);
-            const leftCol = boundingBox.left_col.toFixed(3);
-            const bottomRow = boundingBox.bottom_row.toFixed(3);
-            const rightCol = boundingBox.right_col.toFixed(3);
-            region.data.concepts.forEach(concept => {
-                // Accessing and rounding the concept value
-                const name = concept.name;
-                const value = concept.value.toFixed(4);
-                calculateFaceLocation(result.outputs[0].data.regions[0].region_info.bounding_box);
-            });
+            // const topRow = boundingBox.top_row.toFixed(3);
+            // const leftCol = boundingBox.left_col.toFixed(3);
+            // const bottomRow = boundingBox.bottom_row.toFixed(3);
+            // const rightCol = boundingBox.right_col.toFixed(3);
+            // region.data.concepts.forEach(concept => {
+            //     // Accessing and rounding the concept value
+            //     const name = concept.name;
+            //     const value = concept.value.toFixed(4);
+            //   });
+              displayFaceBox(calculateFaceLocation(result.outputs[0].data.regions[0].region_info.bounding_box));
         })
       })
       .catch(error => console.log('error', error));
@@ -189,7 +199,7 @@ const calculateFaceLocation = (data) => {
     <Logo/>
     <Rank/>
     <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
-    <FaceRecognition clarifaiData={input}/>
+    <FaceRecognition box={box} clarifaiData={input}/>
     </div>
   );
 }

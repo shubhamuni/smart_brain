@@ -71,7 +71,7 @@ const calculateFaceLocation = (data) => {
                 // Accessing and rounding the concept value
                 const name = concept.name;
                 const value = concept.value.toFixed(4);
-                console.log(boundingBox);
+                console.log(result);
             });
         })
       })

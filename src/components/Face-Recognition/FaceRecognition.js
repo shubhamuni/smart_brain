@@ -4,7 +4,7 @@ const FaceRecognition = ({ clarifaiData }) => {
     return(
         <div className="center ma">
             <div className="absolute mt2">
-            <img alt="face-recognition" src={clarifaiData} width="500px" height="auto"/>
+            <img id="inputImage" alt="face-recognition" src={clarifaiData} width="500px" height="auto"/>
             </div>
         </div>
     )

@@ -14,8 +14,10 @@ function App() {
   const [box, setBox] = useState({})
 
 const calculateFaceLocation = (data) => {
-
+  const clariFaiFace = data;
+  const image = document.getElementById("inputImage")
 }
+
 
   const PAT = '2b3660cd318c43ceb89a3440829fe8ba';
   const USER_ID = 'shubhampatil';
@@ -71,7 +73,7 @@ const calculateFaceLocation = (data) => {
                 // Accessing and rounding the concept value
                 const name = concept.name;
                 const value = concept.value.toFixed(4);
-                console.log(result.outputs[0].data.regions[0].region_info);
+                calculateFaceLocation(result.outputs[0].data.regions[0].region_info.bounding_box);
             });
         })
       })

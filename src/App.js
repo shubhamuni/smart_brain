@@ -11,7 +11,12 @@ import FaceRecognition from './components/Face-Recognition/FaceRecognition';
 function App() {
   const [ init, setInit ] = useState(false);
   const [input, setInput] = useState('');
-  const [clarifaiData, setClarifaiData] = useState(null);
+  const [box, setBox] = useState({})
+
+const calculateFaceLocation = (data) => {
+
+}
+
   const PAT = '2b3660cd318c43ceb89a3440829fe8ba';
   const USER_ID = 'shubhampatil';
   const APP_ID = 'smart';
@@ -66,7 +71,7 @@ function App() {
                 // Accessing and rounding the concept value
                 const name = concept.name;
                 const value = concept.value.toFixed(4);
-                console.log(`${name}: ${value} BBox: ${topRow}, ${leftCol}, ${bottomRow}, ${rightCol}`);
+                console.log(`${region.region_info.bounding_box}`);
             });
         })
       })
@@ -81,7 +86,6 @@ function App() {
 
   const onButtonSubmit = () => {
     fetchClarifaiData();
-    console.log(clarifaiData);
   };
 
   useEffect(() => {
@@ -180,7 +184,7 @@ function App() {
     <Logo/>
     <Rank/>
     <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
-    <FaceRecognition clarifaiData={clarifaiData}/>
+    <FaceRecognition clarifaiData={input}/>
     </div>
   );
 }

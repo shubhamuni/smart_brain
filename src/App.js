@@ -73,6 +73,7 @@ const displayFaceBox = (box) => {
     })
       .then(response => response.json())
       .then(result => {
+        console.log(result)
           // setClarifaiData(result)
           const regions = result.outputs[0].data.regions;
           regions.forEach(region => {

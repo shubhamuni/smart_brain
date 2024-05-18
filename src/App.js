@@ -18,7 +18,7 @@ const calculateFaceLocation = (data) => {
   const image = document.getElementById("inputImage");
   const width = Number(image.width);
   const height = Number(image.height);
-  console.log(width,height)
+  // console.log(width,height)
   return{
     leftCol: clarifaiFace.left_col * width,
     topRow: clarifaiFace.top_row * height,
@@ -73,7 +73,7 @@ const displayFaceBox = (box) => {
     })
       .then(response => response.json())
       .then(result => {
-        console.log(result)
+        // console.log(result)
           // setClarifaiData(result)
           const regions = result.outputs[0].data.regions;
           regions.forEach(region => {
@@ -96,7 +96,7 @@ const displayFaceBox = (box) => {
 
   const onInputChange = (event) => {
     setInput(event.target.value)
-    console.log(event.target.value)
+    // console.log(event.target.value)
     
   };
 

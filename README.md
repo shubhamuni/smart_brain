@@ -1,9 +1,9 @@
-Smart Brain: Face Recognition Project
+#Smart Brain: Face Recognition Project
 
-Welcome to the Smart Brain project repository! This project is aimed at implementing a face recognition system using cutting-edge technologies. Below, you will find all the necessary information to understand, set up, and use this system effectively.
+Welcome to the Smart Brain project repository! This project utilizes React, JavaScript, CSS, Tachyons, and React Particle.js libraries to implement a sophisticated face recognition system. Below, you'll find all the necessary information to understand, set up, and use this system effectively.
 Overview
 
-The Smart Brain project utilizes advanced facial recognition algorithms to identify faces in images. It employs deep learning techniques to achieve high accuracy and efficiency in recognizing faces within a given dataset.
+The Smart Brain project employs cutting-edge technologies to recognize faces in images. It utilizes React for building the user interface, JavaScript for logic implementation, CSS for styling, Tachyons for CSS utility classes, and React Particle.js for interactive visual effects.
 Getting Started
 
 To get started with the Smart Brain project, follow these steps:
@@ -12,45 +12,45 @@ To get started with the Smart Brain project, follow these steps:
 
     bash
 
-    git clone <repository_link>
+git clone <(https://github.com/shubhamuni/smart_brain/)>
 
-    Install Dependencies: Ensure you have all the necessary dependencies installed. Refer to the requirements.txt file for details.
+Install Dependencies: Navigate to the project directory and install the required dependencies using npm or yarn:
 
-    Set Up the Environment: Follow the instructions provided in the documentation to set up the environment correctly.
+npm install
 
-    Download Pre-trained Models: Download any pre-trained models required for face detection and recognition.
+or
+
+yarn install
+
+Start the Development Server: Start the development server to run the project locally:
+
+sql
+
+npm start
+
+or
+
+sql
+
+    yarn start
+
+    Access the Application: Once the development server is running, access the application in your web browser at http://localhost:3000.
 
 Usage
 
-Once you have set up the environment and installed the dependencies, you can use the Smart Brain system as follows:
+Once you have the application running, you can use the Smart Brain system as follows:
 
-    Input Image: Provide an image containing faces as input to the system.
+    Upload Image: Upload an image containing faces using the provided interface.
 
-    Face Detection: The system will automatically detect faces within the input image.
+    Face Detection: The system will automatically detect faces within the uploaded image.
 
     Face Recognition: Utilizing the trained models, the system will recognize the faces present in the image.
 
-    Output: The system will generate an output indicating the recognized faces along with any relevant information.
+    Output: The system will display the uploaded image with bounding boxes around detected faces and labels indicating recognized faces.
 
 Example
 
-python
-
-from smart_brain import FaceRecognition
-
-# Initialize the face recognition system
-face_recognizer = FaceRecognition()
-
-# Load input image
-input_image = "path/to/input/image.jpg"
-
-# Recognize faces
-recognized_faces = face_recognizer.recognize_faces(input_image)
-
-# Display results
-for face in recognized_faces:
-    print(f"Name: {face['name']}, Confidence: {face['confidence']}")
-
+The usage of the Smart Brain system is entirely user-driven through the web interface. Simply follow the instructions provided on the application's homepage to upload an image and observe the face detection and recognition process.
 Contributing
 
 We welcome contributions from the community to improve the Smart Brain project. If you find any bugs or have suggestions for enhancements, please open an issue or submit a pull request.
@@ -59,7 +59,7 @@ License
 This project is licensed under the MIT License.
 Acknowledgments
 
-We would like to acknowledge the contributions of the open-source community and the developers of the libraries and frameworks used in this project.
+We would like to acknowledge the developers of React, JavaScript, CSS, Tachyons, and React Particle.js libraries for their valuable contributions.
 Contact
 
-For any inquiries or support, please contact project_email@example.com.
+For any inquiries or support, please contact shubhampatil.ani@gmail.com

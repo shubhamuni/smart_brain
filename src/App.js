@@ -78,7 +78,7 @@ const displayFaceBox = (box) => {
           const regions = result.outputs[0].data.regions;
           regions.forEach(region => {
             // Accessing and rounding the bounding box values
-            const boundingBox = region.region_info.bounding_box;
+            // const boundingBox = region.region_info.bounding_box;
             // const topRow = boundingBox.top_row.toFixed(3);
             // const leftCol = boundingBox.left_col.toFixed(3);
             // const bottomRow = boundingBox.bottom_row.toFixed(3);

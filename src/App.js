@@ -125,7 +125,7 @@ const displayFaceBox = (box) => {
             options={{
                 background: {
                     color: {
-                        value: "#1c1515",
+                        value: "#b5b814",
                     },
                 },
                 fpsLimit: 60,
@@ -156,7 +156,7 @@ const displayFaceBox = (box) => {
                         value: "#f4f4f4",
                     },
                     links: {
-                        color: "#ffffff",
+                        color: "#262618",
                         distance: 100,
                         enable: true,
                         opacity: 0.5,

@@ -153,7 +153,7 @@ const displayFaceBox = (box) => {
                 },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: "#f4f4f4",
                     },
                     links: {
                         color: "#ffffff",

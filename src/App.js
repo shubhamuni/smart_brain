@@ -14,16 +14,16 @@ function App() {
   const [box, setBox] = useState({})
 
 const calculateFaceLocation = (data) => {
-  const clariFaiFace = data;
+  const clarifaiFace = data;
   const image = document.getElementById("inputImage");
   const width = Number(image.width);
   const height = Number(image.height);
   console.log(width,height)
   return{
-    leftCol: clariFaiFace.left_col * width,
-    topRow: clariFaiFace.top_row * height,
-    rightCol: width-(clariFaiFace.right_col * width),
-    bottomRow:height-(clariFaiFace.bottom_row * height)
+    leftCol: clarifaiFace.left_col * width,
+    topRow: clarifaiFace.top_row * height,
+    rightCol: width-(clarifaiFace.right_col * width),
+    bottomRow:height-(clarifaiFace.bottom_row * height)
   }
 }
 const displayFaceBox = (box) => {

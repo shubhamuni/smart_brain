@@ -15,6 +15,7 @@ function App() {
   const [input, setInput] = useState(''); 
   const [box, setBox] = useState({})
   const [route, setRoute] = useState("signin")
+  const [isSignIn, setIsSignIn ] = useState("signin")
 
 const calculateFaceLocation = (data) => {
   const clarifaiFace = data;
@@ -119,6 +120,12 @@ const displayFaceBox = (box) => {
     // console.log(container);
   };
   const onRouteChange = (route) => {
+    if(route === "signin"){
+      setRoute(route)
+      setIsSignIn(false)
+    } else if(route === "home"){
+      setIsSignIn(true)
+    }
     setRoute(route);
   }
   return (
@@ -200,7 +207,7 @@ const displayFaceBox = (box) => {
             }}
         /> 
     }
-    <Navigation onRouteChange={onRouteChange}/>
+    <Navigation onRouteChange={onRouteChange} isSignedIn={isSignIn}/>
     {
     route === "home" ?  <div>
       <Logo/>

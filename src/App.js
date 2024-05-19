@@ -8,6 +8,7 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from "@tsparticles/slim";
 import FaceRecognition from './components/Face-Recognition/FaceRecognition';
 import Signin from './components/SignIn/Signin';
+import Register from './components/Register/Register';
 
 function App() {
   const [ init, setInit ] = useState(false);
@@ -201,14 +202,17 @@ const displayFaceBox = (box) => {
     }
     <Navigation onRouteChange={onRouteChange}/>
     {
-    route === "signin" ? <Signin onRouteChange={onRouteChange}/> 
-    :
-    <div>
+    route === "home" ?  <div>
       <Logo/>
       <Rank/>
       <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
       <FaceRecognition box={box} clarifaiData={input}/>
     </div>
+    :
+     ( route === "signin" ?
+      <Signin onRouteChange={onRouteChange}/>
+      :<Register/>
+      )
     }
     </div>
   );

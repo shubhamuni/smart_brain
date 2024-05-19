@@ -211,7 +211,7 @@ const displayFaceBox = (box) => {
     :
      ( route === "signin" ?
       <Signin onRouteChange={onRouteChange}/>
-      :<Register/>
+      :<Register onRouteChange={onRouteChange}/>
       )
     }
     </div>

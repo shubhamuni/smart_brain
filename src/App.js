@@ -117,9 +117,8 @@ const displayFaceBox = (box) => {
   const particlesLoaded = (container) => {
     // console.log(container);
   };
-  const onRouteChange = () => {
-    setRoute("home");
-    console.log(route)
+  const onRouteChange = (route) => {
+    setRoute(route);
   }
   return (
     <div className="App">  
@@ -200,7 +199,7 @@ const displayFaceBox = (box) => {
             }}
         /> 
     }
-    <Navigation/>
+    <Navigation onRouteChange={onRouteChange}/>
     {
     route === "signin" ? <Signin onRouteChange={onRouteChange}/> 
     :

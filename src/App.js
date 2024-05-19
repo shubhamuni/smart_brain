@@ -7,10 +7,11 @@ import Rank from './components/Rank/Rank';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from "@tsparticles/slim";
 import FaceRecognition from './components/Face-Recognition/FaceRecognition';
+import Signin from './components/SignIn/Signin';
 
 function App() {
   const [ init, setInit ] = useState(false);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState(''); 
   const [box, setBox] = useState({})
 
 const calculateFaceLocation = (data) => {
@@ -117,8 +118,7 @@ const displayFaceBox = (box) => {
   };
 
   return (
-    <div className="App">
-    
+    <div className="App">  
     { init && <Particles className='particles'
             id="tsparticles"
             particlesLoaded={particlesLoaded}
@@ -198,6 +198,7 @@ const displayFaceBox = (box) => {
     }
     <Navigation/>
     <Logo/>
+    <Signin/>
     <Rank/>
     <ImageLinkForm onInputChange={onInputChange} onButtonSubmit={onButtonSubmit}/>
     <FaceRecognition box={box} clarifaiData={input}/>

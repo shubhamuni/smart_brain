@@ -28,3 +28,5 @@ const Signin = () => {
         </main>
     )
 }
+
+export default Signin;

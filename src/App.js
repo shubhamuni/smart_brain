@@ -100,7 +100,6 @@ const displayFaceBox = (box) => {
 
   const onInputChange = (event) => {
     setInput(event.target.value)
-    // console.log(event.target.value)
     
   };
 

@@ -56,15 +56,6 @@ const displayFaceBox = (box) => {
         }
       ]
     });
-
-    // const requestOptions = {
-    //   method: 'POST',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Authorization': 'Key ' + PAT
-    //   },
-    //   body: raw
-    // };
   const MODEL_ID = 'face-detection';
   const fetchClarifaiData = () => {
     fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", {

@@ -1,5 +1,5 @@
 // const script2 = require("./script1");
-import { largeNumber } from "./script1";
+import { largeNumber } from "./script1.mjs";
 
 
 const a = largeNumber;

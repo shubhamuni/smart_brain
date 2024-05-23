@@ -1,7 +1,16 @@
 const express = require("express")
 
+const app = express();
 
+app.get = ('/',(req, res)=>{
+    const user = {
+        name:"shubham",
+        tel:12345
+    }
+    res.send(user)
+})
 
+app.listen(3001);
 
 // import { createServer } from "http";
 // const server = createServer(()=>{

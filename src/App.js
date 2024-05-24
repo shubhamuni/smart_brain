@@ -164,7 +164,7 @@ const displayFaceBox = (box) => {
                             enable: true,
                             area: 100,
                         },
-                        value: 290,
+                        value: 280,
                     },
                     opacity: {
                         value: 0.3,

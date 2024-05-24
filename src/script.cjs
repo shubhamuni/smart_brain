@@ -2,13 +2,7 @@ const express = require("express")
 
 const app = express();
 
-app.get = ('/',(req, res)=>{
-    const user = {
-        name:"shubham",
-        tel:12345
-    }
-    res.send(user)
-})
+app.use(express.static(__dirname + '/public'))
 
 app.listen(3001);
 

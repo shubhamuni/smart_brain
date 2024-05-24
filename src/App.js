@@ -109,7 +109,7 @@ const displayFaceBox = (box) => {
             options={{
                 background: {
                     color: {
-                        value: "#b5b814",
+                        value: "#f5b814",
                     },
                 },
                 fpsLimit: 60,

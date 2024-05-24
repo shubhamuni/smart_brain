@@ -167,7 +167,7 @@ const displayFaceBox = (box) => {
                         value: 290,
                     },
                     opacity: {
-                        value: 0.3,
+                        value: 0.1,
                     },
                     shape: {
                         type: "circle",

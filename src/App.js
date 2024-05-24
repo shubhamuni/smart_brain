@@ -140,7 +140,7 @@ const displayFaceBox = (box) => {
                         value: "#f4f4f4",
                     },
                     links: {
-                        color: "#262618",
+                        color: "#362618",
                         distance: 100,
                         enable: true,
                         opacity: 0.5,

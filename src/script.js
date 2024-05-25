@@ -1,15 +1,18 @@
 const express = require("express")
 const fs = require("fs")
 
-fs.readFile('/hello.txt',(err, data) => {
+fs.readFile('./hello.txt',(err, data) => {
     if(err){
         console.log('Error',err)
     }
     console.log('Async', data.toString('utf-8'))
 })
-const file = fs.readFileSync('/hello.txt');
+const file = fs.readFileSync('./hello.txt');
 console.log('Sync',file.toString())
 
+fs.appendFile('./hello.txt', " this is tried and tested", err => {
+    console.log(err)
+})
 
 const app = express();
 

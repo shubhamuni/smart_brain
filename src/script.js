@@ -7,7 +7,9 @@ fs.readFile('/hello.txt',(err, data) => {
     }
     console.log('Async', data.toString('utf-8'))
 })
-const file = 
+const file = fs.readFileSync('/hello.txt');
+console.log(file)
+
 
 const app = express();
 

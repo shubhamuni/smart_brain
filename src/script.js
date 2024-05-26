@@ -10,7 +10,7 @@ fs.readFile('./hello.txt',(err, data) => {
 const file = fs.readFileSync('./hello.txt');
 console.log('Sync',file.toString())
 
-fs.appendFile('./hello.txt', " this is tried and tested", err => {
+fs.appendFile('./hello.txt', " this is test", err => {
     console.log(err)
 })
 

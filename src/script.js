@@ -9,7 +9,7 @@ fs.readFile('./hello.txt',(err, data) => {
 })
 const file = fs.readFileSync('./hello.txt');
 console.log('Sync',file.toString())
-
+//Below line adds " this is test" sentence to end of hello.txt content
 fs.appendFile('./hello.txt', " this is test", err => {
     console.log(err) 
 })

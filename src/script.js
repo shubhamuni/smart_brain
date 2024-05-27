@@ -19,7 +19,7 @@ const app = express();
 app.use(express.static(__dirname + '../../public'))
 
 app.listen(3001);
-console.log(__dirname)
+// console.log(__dirname)
 // import { createServer } from "http";
 // const server = createServer(()=>{
 //     console.log("I hear you, thanks for request")

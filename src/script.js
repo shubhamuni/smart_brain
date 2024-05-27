@@ -1,7 +1,12 @@
 const express = require("express")
 const fs = require("fs")
+let a;
+if (true){
+    const { largeNumber } = await import('./script1.js');
+    a = largeNumber;
+}
 
-
+console.log(a+1);
 
 fs.readFile('./hello.txt',(err, data) => {
     if(err){

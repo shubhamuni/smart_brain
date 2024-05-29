@@ -11,7 +11,8 @@ fs.readFile('./hello.txt',(err, data) => {
 const file = fs.readFileSync('./hello.txt');
 console.log('Sync',file.toString())
 //Below line adds " this is test" sentence to end of hello.txt content
-fs.appendFile('./hello.txt', " this is test", err => console.log(err))
+// fs.appendFile('./hello.txt', " this is test", err => console.log(err))
+fs.writeFile("bye.txt",err => err ? console.log(err):console.log("Created file sucessfully"))
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(express.static(__dirname + '../../public'))
 
 app.use((req, res, next)=>{
     console.log("Hello")
-})
+}) 
 app.listen(3001);
 // let a;
 // if(true) {

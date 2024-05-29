@@ -1,6 +1,7 @@
 const express = require("express")
 const fs = require("fs")
 
+console.time("startcheck")
 
 fs.readFile('./hello.txt',(err, data) => {
     if(err){
@@ -31,6 +32,7 @@ app.use((req, res, next)=>{
     console.log("Hello")
 }) 
 app.listen(3001);
+console.timeEnd("startcheck")
 // let a;
 // if(true) {
 //     const { largeNumber } = await import("./script1.js");

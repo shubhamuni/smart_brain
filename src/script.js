@@ -23,7 +23,7 @@ fs.unlink("./bye.txt",err =>
   }
   console.log("Inception")
 })
-
+ 
 const app = express();
 
 app.use(express.static(__dirname + '../../public'))
@@ -33,12 +33,12 @@ app.use((req, res, next)=>{
 }) 
 app.listen(3001);
 console.timeEnd("startcheck")
-// let a;
-// if(true) {
-//     const { largeNumber } = await import("./script1.js");
-//     a = largeNumber
-// }
-// console.log(a)
+let a;
+if(true) {
+    const { largeNumber } = await import("./script1.js");
+    a = largeNumber
+}
+console.log(a)
 // // const response = await fetch("https://jsonplaceholder.typicode.com/users");
 // // const data = await response.json();
 // console.log(a);

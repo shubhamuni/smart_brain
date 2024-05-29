@@ -12,7 +12,10 @@ const file = fs.readFileSync('./hello.txt');
 console.log('Sync',file.toString())
 //Below line adds " this is test" sentence to end of hello.txt content
 // fs.appendFile('./hello.txt', " this is test", err => console.log(err))
-fs.writeFile("bye.txt",err => err ? console.log(err):console.log("Created file sucessfully"))
+fs.writeFile("bye.txt","Sad to see you bye",err => 
+  {  if (err)  {
+    console.log(err)
+}})
 
 const app = express();
 

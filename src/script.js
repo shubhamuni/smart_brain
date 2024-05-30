@@ -32,7 +32,7 @@ app.use((req, res, next)=>{
     console.log("Hello")
 }) 
 app.listen(3001);
-console.timeEnd("startcheck")
+console.timeEnd("startcheck") //to check time required to process code from console.time() to console.timeEnd()
 // let a;
 // if(true) {
 //     const { largeNumber } = await import("./script1.js");

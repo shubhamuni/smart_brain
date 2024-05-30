@@ -1,7 +1,7 @@
 const express = require("express")
 const fs = require("fs")
 
-console.time("startcheck")
+console.time("startcheck") //to check time required to process code from console.time() to console.timeEnd()
 
 fs.readFile('./hello.txt',(err, data) => {
     if(err){

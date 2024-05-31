@@ -2,10 +2,13 @@ const fs = require('fs')
 
 function question1 () {
     fs.readFile('./santa.txt', (err, data)=>{
-        
+        const design = data.toString();
+        const designSort = design.split('');
+        console.log(designSort);
     })
 }
 
+question1();
 // 
 // const fs = require("fs")
 

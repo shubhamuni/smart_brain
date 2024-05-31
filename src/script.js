@@ -1,5 +1,11 @@
 const fs = require('fs')
 
+function question1 () {
+    fs.readFile('./santa.txt', (err, data)=>{
+        
+    })
+}
+
 // 
 // const fs = require("fs")
 

@@ -1,7 +1,7 @@
-const fs = require('fs')
+import { readFile } from 'fs';
 
 function question1 () {
-    fs.readFile('./santa.txt', (err, data)=>{
+    readFile('./santa.txt', (err, data)=>{
         const design = data.toString();
         const designSort = design.split('');
         console.log(designSort);

@@ -3,7 +3,7 @@ const fs = require('fs')
 function question1 () {
     fs.readFile('./santa.txt', (err, data)=>{
         const direction = data.toString();
-        const directionArray = design.split('');
+        const directionArray = direction.split('');
         console.log(directionArray);
     })
 }

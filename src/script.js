@@ -3,8 +3,8 @@ const fs = require('fs')
 function question1 () {
     fs.readFile('./santa.txt', (err, data)=>{
         const design = data.toString();
-        const designSort = design.split('');
-        console.log(designSort);
+        // const designSort = design.split('');
+        console.log(design);
     })
 }
 

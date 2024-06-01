@@ -4,7 +4,15 @@ function question1 () {
     fs.readFile('./santa.txt', (err, data)=>{
         const direction = data.toString();
         const directionArray = direction.split('');
-        console.log(directionArray);
+        const answer = directionArray.reduce((acc,cur)=>{
+            if(cur === '('){
+                return acc +=1;
+            }
+            else if (cur === ')') {
+                return acc -= 1;
+            }
+        },0)
+        console.log('Floor: ',answer)
     })
 }
 

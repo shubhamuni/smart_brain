@@ -26,8 +26,10 @@ function question2 () {
         const directions = data.toString();
         const directionsArray = directions.split('');
         const answer = directionsArray;
+        console.log(answer);
     })
 }
+question2();
 // 
 // const fs = require("fs")
 

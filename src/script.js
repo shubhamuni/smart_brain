@@ -30,6 +30,7 @@ function question2 () {
     })
 }
 question2();
+
 // 
 // const fs = require("fs")
 

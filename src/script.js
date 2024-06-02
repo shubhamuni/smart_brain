@@ -25,12 +25,24 @@ function question2 () {
     fs.readFile('./santa.txt', (err, data)=> {
         const directions = data.toString();
         const directionsArray = directions.split('');
-        const answer = directionsArray;
-        console.log(answer);
+        let accumulator = 0;
+        const answer = directionsArray.some((currentValue) => {
+            if (currentValue === '(') {
+                return accumulator += 1;
+            }
+            else if (currentValue === ')') {
+                return accumulator -= 1;
+            }
+            return accumulator;
+        })
+        console.log('Basement entered at: ',answer);
     })
 }
 question2();
-
+const c = 5245;
+const d = 4816;
+const e = c - d;
+console.log(e)
 // 
 // const fs = require("fs")
 

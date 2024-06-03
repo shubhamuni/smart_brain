@@ -39,10 +39,10 @@ function question2 () {
     })
 }
 question2();
-const c = 5245;
-const d = 4816;
-const e = c - d;
-console.log(e)
+// const c = 5245;
+// const d = 4816;
+// const e = c - d;
+// console.log(e)
 // 
 // const fs = require("fs")
 

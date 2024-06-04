@@ -26,6 +26,7 @@ function question2 () {
         const directions = data.toString();
         const directionsArray = directions.split('');
         let accumulator = 0;
+        let counter = 0;
         const answer = directionsArray.some((currentValue) => {
             if (currentValue === '(') {
                 return accumulator += 1;
@@ -33,9 +34,10 @@ function question2 () {
             else if (currentValue === ')') {
                 return accumulator -= 1;
             }
+            counter++
             return accumulator < 0;
         })
-        console.log('Basement entered at: ',answer);
+        console.log('Basement entered at: ',counter);
     })
 }
 question2();

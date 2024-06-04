@@ -2,7 +2,7 @@ const fs = require('fs')
 
 function question1 () {
     fs.readFile('./santa.txt', (err, data)=>{
-        console.time('santa-time');
+        console.time('q = 1 santa-time');
         const direction = data.toString();
         const directionArray = direction.split('');
         const answer = directionArray.reduce((acc,cur)=>{
@@ -13,7 +13,7 @@ function question1 () {
                 return acc -= 1;
             }
         },0)
-        console.timeEnd('santa-time');
+        console.timeEnd('q = 1 santa-time');
         console.log('Floor: ',answer)
     })
 }

@@ -33,7 +33,7 @@ function question2 () {
             else if (currentValue === ')') {
                 return accumulator -= 1;
             }
-            return accumulator;
+            return accumulator < 0;
         })
         console.log('Basement entered at: ',answer);
     })

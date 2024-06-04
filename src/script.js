@@ -18,7 +18,7 @@ function question1 () {
     })
 }
 
-question1();
+// question1();
 
 //2 - When does santa first enter the basement 
 function question2 () {

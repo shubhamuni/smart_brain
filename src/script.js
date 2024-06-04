@@ -40,6 +40,48 @@ function question2 () {
 }
 question2();
 
+const fs = require('fs')
+
+function question1 () {
+    fs.readFile('./santa.txt', (err, data)=>{
+        console.time('santa-time');
+        const direction = data.toString();
+        const directionArray = direction.split('');
+        const answer = directionArray.reduce((acc,cur)=>{
+            if(cur === '('){
+                return acc +=1;
+            }
+            else if (cur === ')') {
+                return acc -= 1;
+            }
+        },0)
+        console.timeEnd('santa-time');
+        console.log('Floor: ',answer)
+    })
+}
+
+question1();
+
+//2 - When does santa first enter the basement 
+function question2 () {
+    fs.readFile('./santa.txt', (err, data)=> {
+        const directions = data.toString();
+        const directionsArray = directions.split('');
+        let accumulator = 0;
+        const answer = directionsArray.some((currentValue) => {
+            if (currentValue === '(') {
+                return accumulator += 1;
+            }
+            else if (currentValue === ')') {
+                return accumulator -= 1;
+            }
+            return accumulator;
+        })
+        console.log('Basement entered at: ',answer);
+    })
+}
+question2();
+
 // 
 // const fs = require("fs")
 

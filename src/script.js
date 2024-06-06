@@ -44,13 +44,13 @@ function question2 () {
 }
 question2();
 
-// /*
-// / --> res = this is working
-// /signin --> POST = success/fail
-// /profile/:userId --> GET = user
-// /image --> PUT --> user
+/*
+/ --> res = this is working
+/signin --> POST = success/fail
+/profile/:userId --> GET = user
+/image --> PUT --> user
 
-//  */
+ */
 
 // 
 // const fs = require("fs")

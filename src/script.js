@@ -1,48 +1,50 @@
-const fs = require('fs')
+// const fs = require('fs')
 
-function question1 () {
-    fs.readFile('./santa.txt', (err, data)=>{
-        console.time('q = 1 santa-time');
-        const direction = data.toString();
-        const directionArray = direction.split('');
-        const answer = directionArray.reduce((acc,cur)=>{
-            if(cur === '('){
-                return acc +=1;
-            }
-            else if (cur === ')') {
-                return acc -= 1;
-            }
-        },0)
-        console.timeEnd('q = 1 santa-time');
-        console.log('Floor: ',answer)
-    })
-}
+// function question1 () {
+//     fs.readFile('./santa.txt', (err, data)=>{
+//         console.time('q = 1 santa-time');
+//         const direction = data.toString();
+//         const directionArray = direction.split('');
+//         const answer = directionArray.reduce((acc,cur)=>{
+//             if(cur === '('){
+//                 return acc +=1;
+//             }
+//             else if (cur === ')') {
+//                 return acc -= 1;
+//             }
+//         },0)
+//         console.timeEnd('q = 1 santa-time');
+//         console.log('Floor: ',answer)
+//     })
+// }
 
-question1();
+// question1();
 
-//2 - When does santa first enter the basement 
-function question2 () {
-    fs.readFile('./santa.txt', (err, data)=> {
-        console.time('q = 2 santa-time');
-        const directions = data.toString();
-        const directionsArray = directions.split('');
-        let accumulator = 0;
-        let counter = 0;
-        const answer = directionsArray.some((currentItem) => {
-            if (currentItem === '(') {
-                accumulator += 1;
-            }
-            else if (currentItem === ')') {
-                accumulator -= 1;
-            }
-            counter++
-            return accumulator < 0;
-        })
-        console.timeEnd('q = 2 santa-time');
-        console.log('Basement entered at: ',counter);
-    })
-}
-question2();
+// //2 - When does santa first enter the basement 
+// function question2 () {
+//     fs.readFile('./santa.txt', (err, data)=> {
+//         console.time('q = 2 santa-time');
+//         const directions = data.toString();
+//         const directionsArray = directions.split('');
+//         let accumulator = 0;
+//         let counter = 0;
+//         const answer = directionsArray.some((currentItem) => {
+//             if (currentItem === '(') {
+//                 accumulator += 1;
+//             }
+//             else if (currentItem === ')') {
+//                 accumulator -= 1;
+//             }
+//             counter++
+//             return accumulator < 0;
+//         })
+//         console.timeEnd('q = 2 santa-time');
+//         console.log('Basement entered at: ',counter);
+//     })
+// }
+// question2();
+
+
 
 /*
 / --> res = this is working
@@ -51,6 +53,8 @@ question2();
 /image --> PUT --> user
 
  */
+
+
 
 // 
 // const fs = require("fs")

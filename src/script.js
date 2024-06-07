@@ -44,10 +44,11 @@
 // }
 // question2();
 const express = require("express")
+const bodyparser = require('body-parser')
+
+
 const app = express();
-
 app.use(express.json());
-
 const database = {
     users: [
         {
@@ -83,7 +84,7 @@ app.post('/signin', (res, req)=>{
     if(req.body.email === database.users[0].email && req.body.password === database.users[0].password){
         res.json('success')
     } else {
-        res.statusCode(400).json('Error logging in')
+        res.status(400).json('Error logging in')
     }
 })
 app.listen(3000,()=>{

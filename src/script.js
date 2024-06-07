@@ -53,7 +53,25 @@ const database = [
         id:123,
         name:"Shubham",
         email:"shubham@gmail.com",
-        password:"anything"
+        password:"anything",
+        entries: 0,
+        joined: new Date()
+    },
+    {
+        id:123,
+        name:"jhon",
+        email:"jhon@gmail.com",
+        password:"everything",
+        entries: 0,
+        joined: new Date()
+    },
+    {
+        id:123,
+        name:"sandesh",
+        email:"sandesh@gmail.com",
+        password:"anywhere",
+        entries: 0,
+        joined: new Date()
     }
 ]
 

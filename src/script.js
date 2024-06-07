@@ -48,33 +48,47 @@ const app = express();
 
 app.use(express.json());
 
-const database = [
-    {
-        id:123,
-        name:"Shubham",
-        email:"shubham@gmail.com",
-        password:"anything",
-        entries: 0,
-        joined: new Date()
-    },
-    {
-        id:123,
-        name:"jhon",
-        email:"jhon@gmail.com",
-        password:"everything",
-        entries: 0,
-        joined: new Date()
-    },
-    {
-        id:123,
-        name:"sandesh",
-        email:"sandesh@gmail.com",
-        password:"anywhere",
-        entries: 0,
-        joined: new Date()
+const database = {
+    users: [
+        {
+            id:123,
+            name:"Shubham",
+            email:"shubham@gmail.com",
+            password:"anything",
+            entries: 0,
+            joined: new Date()
+        },
+        {
+            id:123,
+            name:"jhon",
+            email:"jhon@gmail.com",
+            password:"everything",
+            entries: 0,
+            joined: new Date()
+        },
+        {
+            id:123,
+            name:"sandesh",
+            email:"sandesh@gmail.com",
+            password:"anywhere",
+            entries: 0,
+            joined: new Date()
+        }
+    ]
+}
+app.get('/',(req, res)=> {
+    res.send('this is working')
+})
+app.post('/signin', (res, req)=>{
+    if(req.body.email === database.users[0].email && req.body.password === database.users[0].password){
+        res.json('success')
+    } else {
+        res.statusCode(400).json('Error logging in')
     }
-]
-
+})
+app.listen(3000,()=>{
+    console.log('app is running on port 3000')
+})
 
 /*
 / --> res = this is working

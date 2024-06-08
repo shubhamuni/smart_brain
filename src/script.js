@@ -80,6 +80,17 @@ const database = {
 app.get('/',(req, res)=> {
     res.send('this is working')
 })
+app.post('/register', (res, req) =>{
+    const {name, email, password} = req.body;
+    database.users.push({
+        id: 123,
+        name: name,
+        email: email,
+        password: password,
+        entries: 0,
+        joined: new Date()
+    })
+})
 app.post('/signin', (res, req)=>{
     if(req.body.email === database.users[0].email && req.body.password === database.users[0].password){
         res.json('success')

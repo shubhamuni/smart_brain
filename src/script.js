@@ -88,7 +88,7 @@ app.post('/signin', (res, req)=>{
     }
 })
 app.listen(3000,()=>{
-    console.log('app is running on port 3000')
+    console.log('Please check localhost:3000 on browser')
 })
 
 /*

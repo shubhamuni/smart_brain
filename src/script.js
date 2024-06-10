@@ -80,7 +80,7 @@ const database = {
 app.get('/',(req, res)=> {
     res.send('this is working')
 })
-app.post('/register', (res, req) =>{
+app.post('/create', (res, req) =>{
     const {name, email, password} = req.body;
     database.users.push({
         id: 123,

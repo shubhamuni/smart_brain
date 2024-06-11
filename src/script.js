@@ -102,13 +102,13 @@ app.listen(3000,()=>{
     console.log('Please check localhost:3000 on browser')
 })
 
-/*
+
 / --> res = this is working
 /signin --> POST = success/fail
 /profile/:userId --> GET = user
 /image --> PUT --> user
 
- */
+ 
 
 
 

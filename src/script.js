@@ -43,12 +43,12 @@
 //     })
 // }
 // question2();
-const express = require("express")
-const bodyparser = require('body-parser')
+import {express,  json } from "express";
+import bodyparser from 'body-parser';
 
 
 const app = express();
-app.use(express.json());
+app.use(json());
 const database = {
     users: [
         {
@@ -81,7 +81,7 @@ app.get('/',(req, res)=> {
     res.send('this is working')
 })
 app.post('/register', (res, req) =>{
-    const {name, email, password} = req.body;
+    const {email, name, password} = req.body;
     database.users.push({
         id: 123,
         name: name,
@@ -90,6 +90,7 @@ app.post('/register', (res, req) =>{
         entries: 0,
         joined: new Date()
     })
+    res.json(database.users[database.users.length-1])
 })
 app.post('/signin', (res, req)=>{
     if(req.body.email === database.users[0].email && req.body.password === database.users[0].password){

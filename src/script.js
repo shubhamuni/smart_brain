@@ -43,12 +43,12 @@
 //     })
 // }
 // question2();
-import express, { json } from "express";
-import bodyparser from 'body-parser';
+const express = require("express")
+
 
 
 const app = express();
-app.use(json());
+app.use(express.json());
 const database = {
     users: [
         {

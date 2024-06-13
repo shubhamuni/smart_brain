@@ -48,7 +48,7 @@ const bodyParser = require('body-parser')
 
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 const database = {
     users: [
         {
@@ -81,7 +81,7 @@ app.get('/',(req, res)=> {
     res.send('this is working')
 })
 app.post('/register', (res, req) =>{
-    const { email, name, password } = req.body;
+    const { email, name, password } = req.body
     database.users.push({
         id: 123,
         name: name,
@@ -89,11 +89,11 @@ app.post('/register', (res, req) =>{
         password: password,
         entries: 0,
         joined: new Date()
-    })
+    });
     res.json(database.users[database.users.length-1])
 })
 app.post('/signin', (res, req)=>{
-    if(req.body.email === database.users[0].email && req.body.password === database.users[0].password){
+    if(req.body.email === database.users[2].email && req.body.password === database.users[2].password){
         res.json('success')
     } else {
         res.status(400).json('Error logging in')

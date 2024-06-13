@@ -80,7 +80,14 @@ const database = {
 app.get('/',(req, res)=> {
     res.send('this is working')
 })
-app.post('/register', (res, req) =>{
+app.post('/signin', (req, res)=>{
+    if(req.body.email === database.users[2].email && req.body.password === database.users[2].password){
+        res.json('success')
+    } else {
+        res.status(400).json('Error logging in')
+    }
+})
+app.post('/register', (req, res) =>{
     const { email, name, password } = req.body
     database.users.push({
         id: 123,
@@ -91,13 +98,6 @@ app.post('/register', (res, req) =>{
         joined: new Date()
     });
     res.json(database.users[database.users.length-1])
-})
-app.post('/signin', (res, req)=>{
-    if(req.body.email === database.users[2].email && req.body.password === database.users[2].password){
-        res.json('success')
-    } else {
-        res.status(400).json('Error logging in')
-    }
 })
 app.listen(3000,()=>{
     console.log('Please check localhost:3000 on browser')

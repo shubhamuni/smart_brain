@@ -43,7 +43,7 @@
 //     })
 // }
 // question2();
-import {express,  json } from "express";
+import express, { json } from "express";
 import bodyparser from 'body-parser';
 
 

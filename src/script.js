@@ -68,7 +68,7 @@ const database = {
             joined: new Date()
         },
         {
-            id:123,
+            id:Math.floor(Math.random() * 900) + 100,
             name:"sandesh",
             email:"sandesh@gmail.com",
             password:"anywhere",
@@ -82,7 +82,7 @@ app.get('/',(req, res)=> {
 })
 app.post('/signin', (req, res)=>{
     if(req.body.email === database.users[2].email && req.body.password === database.users[2].password){
-        res.json('success')
+        res.json(database.users[2])
     } else {
         res.status(400).json('Error logging in')
     }

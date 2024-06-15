@@ -100,7 +100,7 @@ app.post('/register', (req, res) =>{
     res.json(database.users[database.users.length-1])
 })
 app.listen(3000,()=>{
-    console.log('Please check localhost:3000 on browser')
+    console.log('Server is running on localhost:3000')
 })
 
 // /*

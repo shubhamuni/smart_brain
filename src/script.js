@@ -87,14 +87,16 @@ app.post('/signin', (req, res)=>{
         res.status(400).json('Error logging in')
     }
 })
+let count;
 app.post('/register', (req, res) =>{
     const { email, name, password } = req.body
+    count++
     database.users.push({
         id: Math.floor(Math.random() * 900) + 100,
         name: name,
         email: email,
         password: password,
-        entries: 0,
+        entries: count,
         joined: new Date()
     });
     res.json(database.users[database.users.length-1])

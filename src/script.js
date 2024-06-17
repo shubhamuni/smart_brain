@@ -84,7 +84,7 @@ app.post('/signin', (req, res)=>{
     if(req.body.email === database.users[2].email && req.body.password === database.users[2].password){
         res.json(database.users[2])
     } else {
-        res.status(400).json('Error logging in')
+        res.status(401).json('Error logging in')
     }
 })
 let count;

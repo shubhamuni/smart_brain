@@ -105,13 +105,13 @@ app.listen(3000,()=>{
     console.log('Server is running on localhost:3000')
 })
 
-// /*
-// / --> res = this is working
-// /signin --> POST = success/fail
-// /profile/:userId --> GET = user
-// /image --> PUT --> user
+/*
+/ --> res = this is working
+/signin --> POST = success/fail
+/profile/:userId --> GET = user
+/image --> PUT --> user
 
-//  */
+ */
 
 
 

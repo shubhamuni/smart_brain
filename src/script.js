@@ -104,7 +104,6 @@ app.post('/register', (req, res) =>{
 app.listen(3000,()=>{
     console.log('Server is running on localhost:3000')
 })
-
 // 
 // const fs = require("fs")
 

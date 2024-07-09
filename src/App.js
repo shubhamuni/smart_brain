@@ -127,7 +127,7 @@ const displayFaceBox = (box) => {
                     },
                     modes: {
                         push: {
-                            quantity: 5,
+                            quantity: 6,
                         },
                         repulse: {
                             distance: 120,

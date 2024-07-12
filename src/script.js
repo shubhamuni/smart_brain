@@ -1,22 +1,22 @@
-// const fs = require('fs')
+const fs = require('fs')
 
-// function question1 () {
-//     fs.readFile('./santa.txt', (err, data)=>{
-//         console.time('q = 1 santa-time');
-//         const direction = data.toString();
-//         const directionArray = direction.split('');
-//         const answer = directionArray.reduce((acc,cur)=>{
-//             if(cur === '('){
-//                 return acc +=1;
-//             }
-//             else if (cur === ')') {
-//                 return acc -= 1;
-//             }
-//         },0)
-//         console.timeEnd('q = 1 santa-time');
-//         console.log('Floor: ',answer)
-//     })
-// }
+function question1 () {
+    fs.readFile('./santa.txt', (err, data)=>{
+        console.time('q = 1 santa-time');
+        const direction = data.toString();
+        const directionArray = direction.split('');
+        const answer = directionArray.reduce((acc,cur)=>{
+            if(cur === '('){
+                return acc +=1;
+            }
+            else if (cur === ')') {
+                return acc -= 1;
+            }
+        },0)
+        console.timeEnd('q = 1 santa-time');
+        console.log('Floor: ',answer)
+    })
+}
 
 // question1();
 

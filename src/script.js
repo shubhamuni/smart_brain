@@ -1,22 +1,3 @@
-const fs = require('fs')
-
-function question1 () {
-    fs.readFile('./santa.txt', (err, data)=>{
-        console.time('q = 1 santa-time');
-        const direction = data.toString();
-        const directionArray = direction.split('');
-        const answer = directionArray.reduce((acc,cur)=>{
-            if(cur === '('){
-                return acc +=1;
-            }
-            else if (cur === ')') {
-                return acc -= 1;
-            }
-        },0)
-        console.timeEnd('q = 1 santa-time');
-        console.log('Floor: ',answer)
-    })
-}
 
 // question1();
 
@@ -163,3 +144,22 @@ app.listen(3000,()=>{
 // // const response = await fetch("https://jsonplaceholder.typicode.com/users");
 // // const data = await response.json();
 // console.log(a);
+// const fs = require('fs')
+
+// function question1 () {
+//     fs.readFile('./santa.txt', (err, data)=>{
+//         console.time('q = 1 santa-time');
+//         const direction = data.toString();
+//         const directionArray = direction.split('');
+//         const answer = directionArray.reduce((acc,cur)=>{
+//             if(cur === '('){
+//                 return acc +=1;
+//             }
+//             else if (cur === ')') {
+//                 return acc -= 1;
+//             }
+//         },0)
+//         console.timeEnd('q = 1 santa-time');
+//         console.log('Floor: ',answer)
+//     })
+// }

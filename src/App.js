@@ -30,7 +30,7 @@ const calculateFaceLocation = (data) => {
   }
 }
 const displayFaceBox = (box) => {
-  console.log(box);
+  // console.log(box);
   setBox(box);
 }
 

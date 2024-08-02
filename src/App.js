@@ -68,7 +68,7 @@ const displayFaceBox = (box) => {
       .then(response => response.json())
       .then(result => {
               displayFaceBox(calculateFaceLocation(result.outputs[0].data.regions[0].region_info.bounding_box));
-            console.log(result)
+            // console.log(result)
             })
       .catch(error => console.log('error', error));
   };

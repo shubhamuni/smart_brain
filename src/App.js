@@ -19,7 +19,7 @@ function App() {
 
 const calculateFaceLocation = (data) => {
   const clarifaiFace = data;
-  const imag = document.getElementById("inputImage");
+  const image = document.getElementById("inputImage");
   const width = Number(image.width);
   const height = Number(image.height);
   return{

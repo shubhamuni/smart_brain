@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./FaceRecognition.module.css"
-const FaceRecognition = ({ clarifaiData, box}) => {
+export default function FaceRecognition  ({ clarifaiData, box}) {
     return(
         <div className="center ma">
             <div className="absolute mt2">
@@ -10,4 +10,3 @@ const FaceRecognition = ({ clarifaiData, box}) => {
         </div>
     )
 }
-export default FaceRecognition;

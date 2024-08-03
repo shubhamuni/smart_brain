@@ -197,7 +197,9 @@ const displayFaceBox = (box) => {
       )
     }
     <br/>
-    <MyButton/>
+    <MyButton className="f6 link dim black db"/>
+    <br/>
+    <MyButton className="f6 link dim black db"/>
     </div>
   );
 }

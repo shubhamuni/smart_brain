@@ -196,10 +196,6 @@ const displayFaceBox = (box) => {
       :<Register onRouteChange={onRouteChange}/>
       )
     }
-    <br/>
-    <MyButton className="f6 link dim black db"/>
-    <br/>
-    <MyButton className="f6 link dim black db"/>
     </div>
   );
 }

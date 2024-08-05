@@ -9,8 +9,6 @@ import { loadSlim } from "@tsparticles/slim";
 import FaceRecognition from './components/Face-Recognition/FaceRecognition';
 import Signin from './components/SignIn/Signin';
 import Register from './components/Register/Register';
-import MyButton from './CounterButton';
-
 function App() {
   const [ init, setInit ] = useState(false);
   const [input, setInput] = useState(''); 

@@ -195,7 +195,6 @@ const displayFaceBox = (box) => {
       :<Register onRouteChange={onRouteChange}/>
       )
     }
-    <Test/>
     </div>
   );
 }

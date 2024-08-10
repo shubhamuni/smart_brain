@@ -69,7 +69,7 @@ const displayFaceBox = (box) => {
               displayFaceBox(calculateFaceLocation(result.outputs[0].data.regions[0].region_info.bounding_box));
             // console.log(result)
             })
-      .catch(error => console.log('error occured', error));
+      .catch(error => console.log('error occured that is ', error));
   };
 
   const onInputChange = (event) => {

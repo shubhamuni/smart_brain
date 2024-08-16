@@ -9,7 +9,7 @@ import { loadSlim } from "@tsparticles/slim";
 import FaceRecognition from './components/Face-Recognition/FaceRecognition';
 import Signin from './components/SignIn/Signin';
 import Register from './components/Register/Register';
-import Test from './Test';
+
 function App() {
   const [ init, setInit ] = useState(false);
   const [input, setInput] = useState(''); 
@@ -35,7 +35,7 @@ const displayFaceBox = (box) => {
 }
 
 
-  const PAT = '2b3660cd318c43ceb89a3440829fe8ba';
+  const PAT = '2b3660cd318c43ceb89a3440829fe8ba'; //Personal Access Token
   const USER_ID = 'shubhampatil';
   const APP_ID = 'smart';
   const IMAGE_URL = input;
